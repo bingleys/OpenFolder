@@ -11,6 +11,7 @@ public class MainAcitivity extends Activity {
 
 	View vOpenView;
 	View vBackgroudView;
+	OpenFolder mOpenFolder;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,13 +20,15 @@ public class MainAcitivity extends Activity {
 		
 		vOpenView = getLayoutInflater().inflate(R.layout.main_openview, null);
 		vBackgroudView = getWindow().getDecorView();
+		
+		mOpenFolder = new OpenFolder(this);
 	}
 
 	public void openFolderUp(View view) {
-		new OpenFolder(this).openFolderView(view, vBackgroudView, vOpenView, 100, 0);
+		mOpenFolder.openFolderView(view, vBackgroudView, vOpenView, 100, 0);
 	}
 
 	public void openFolderDown(View view) {
-		new OpenFolder(this).openFolderView(view, vBackgroudView, vOpenView, 100, 1);
+		mOpenFolder.openFolderView(view, vBackgroudView, vOpenView, 100, 1);
 	}
 }
