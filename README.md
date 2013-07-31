@@ -1,4 +1,4 @@
 OpenFolder
 ==========
 
-仿造IOS ，文件夹展开，控件。
+Like IOS JWFolldersDemo, 实现类似iphone主屏文件夹展开合并效果。
